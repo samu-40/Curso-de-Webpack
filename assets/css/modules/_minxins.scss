@@ -1,0 +1,57 @@
+@mixin full {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin text-center {
+    text-align: center;
+}
+
+@mixin text-right {
+    text-align: right;
+}
+
+@mixin center-vertical-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin absolute-cover {
+    @include full;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@mixin caption {
+    padding: $large-padding;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 5px;
+    position: absolute;
+    width: auto;
+    bottom: 0;
+    left: 10px;
+    z-index: 10;
+    @include text-center;
+    color: rgba($grey, 0.6);
+}
+
+@mixin main-text {
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.5em;
+
+    h1,h2{
+        font-size: $big;
+        font-weight: inherit;
+        letter-spacing: 0.5em;
+        line-height: 1.5em;
+    }
+}
+
+@mixin transition-slider {
+    transition: all .6s ease-out;
+}
